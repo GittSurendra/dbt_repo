@@ -4,6 +4,6 @@ SELECT
     customer_id,
     customer_name,
     email,
-    city,
+    UPPER(city) as CITY,
     created_at
 FROM {{ ref('stg_customers') }}
