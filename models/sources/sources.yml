@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: SAMPLE_DB_DEV
+    schema: RAW
+    tables:
+      - name: customers
+      - name: orders
+      - name: products
+      - name: order_items
