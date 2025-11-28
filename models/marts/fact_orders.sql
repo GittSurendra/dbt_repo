@@ -7,7 +7,7 @@ SELECT
     o.status,
     c.customer_id,
     c.customer_name,
-    SUM(oi.quantity * p.price) AS total_order_value,
+    SUM(oi.quantity * p.price*100) AS total_order_value_100,
     COUNT(oi.order_item_id) AS total_items
 FROM {{ ref('stg_orders') }} o
 LEFT JOIN {{ ref('stg_customers') }} c
